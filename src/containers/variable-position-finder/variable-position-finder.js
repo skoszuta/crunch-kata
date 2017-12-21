@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import getVariableName from '../../utils/get-variable-name';
+import getVariablePath from '../../utils/get-variable-path';
 
 class VariablePositionFinder extends React.Component {
   constructor(props) {
@@ -18,10 +19,25 @@ class VariablePositionFinder extends React.Component {
     const { order } = this.props.variables;
 
     this.setState({
-      selectedVariable: value
+      selectedVariable: value,
+      breadcrumbs: getVariablePath(value, this.props.variables.order)
     });
+  }
 
-    this.performSearch(value);
+  renderBreadcrumbs() {
+    if (this.state.selectedVariable && !this.state.breadcrumbs) {
+      return (
+        <div>Variable was not found in the tree.</div>
+      );
+    } else if (!this.state.selectedVariable) {
+      return '';
+    }
+
+    const { index } = this.props.variables;
+
+    return this.state.breadcrumbs
+      .concat(getVariableName(index[this.state.selectedVariable]))
+      .join(' -> ');
   }
 
   render() {
@@ -29,7 +45,9 @@ class VariablePositionFinder extends React.Component {
       <option value={key} key={key}>{getVariableName(variable, key)}</option>
     ));
 
-    const breadcrumbs = this.state.breadcrumbs.join(' -> ');
+    if (this.state.selectedVariable === void 0) {
+      options.unshift(<option value={void 0} key="placeholder">Select a variable to see its position...</option>);
+    }
 
     return (
       <div>
@@ -38,28 +56,9 @@ class VariablePositionFinder extends React.Component {
           onChange={this.onSelectChange.bind(this)}>
           {options}
         </select>
-        <div>{breadcrumbs}</div>
+        <div>{this.renderBreadcrumbs()}</div>
       </div>
     );
-  }
-
-  performSearch(key, tree = this.props.variables.order, breadcrumbs = ['Root']) {
-    return tree.some((node) => {
-      if (typeof node !== 'string') {
-        const nodeName = Object.keys(node)[0];
-        return this.performSearch(key, node[nodeName], [...breadcrumbs, nodeName]);
-      } else if (node === key) {
-        this.setState({
-          breadcrumbs: [
-            ...breadcrumbs,
-            getVariableName(this.props.variables.index[node])
-          ]
-        });
-        return true;
-      } else {
-        return false;
-      }
-    });
   }
 }
 
