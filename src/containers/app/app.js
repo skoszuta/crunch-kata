@@ -9,15 +9,22 @@ import VariableFinder from '../variable-finder/variable-finder';
 
 const ContentWrapper = styled.div`
   width: 100%;
-  margin: 0 auto;
-  font-family: Helvetica, Arial, sans-serif;
+  padding: 1rem;
   
   @media (min-width: 600px) {
-    width: 60%;
+    padding: 2rem;
   }
+`;
+
+const Heading = styled.h1`
+  margin: 0 0 1rem 0;
+`;
+
+const Section = styled.section`
+  margin-top: 2rem;
   
-  @media (min-width: 960px) {
-    width: 40%;
+  &:first-child {
+    margin-top: 0;
   }
 `;
 
@@ -35,18 +42,18 @@ class App extends React.Component {
 
     return (
       <ContentWrapper>
-        <section>
-          <h1>The component</h1>
+        <Section>
+          <Heading>The component</Heading>
           <VariableCatalog variables={this.props.variables}/>
-        </section>
-        <section>
-          <h1>Variable position finder</h1>
+        </Section>
+        <Section>
+          <Heading>Variable position finder</Heading>
           <VariablePositionFinder/>
-        </section>
-        <section>
-          <h1>Variable finder</h1>
+        </Section>
+        <Section>
+          <Heading>Variable finder</Heading>
           <VariableFinder/>
-        </section>
+        </Section>
       </ContentWrapper>
     );
   }
