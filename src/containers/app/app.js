@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { fetchVariablesWithOrder } from '../../actions/variables-actions';
 import VariableCatalog from '../../components/variable-catalog/variable-catalog';
 import VariablePositionFinder from '../variable-position-finder/variable-position-finder';
+import VariableFinder from '../variable-finder/variable-finder';
 
 const ContentWrapper = styled.div`
   width: 100%;
@@ -44,6 +45,7 @@ class App extends React.Component {
         </section>
         <section>
           <h1>Variable finder</h1>
+          <VariableFinder/>
         </section>
       </ContentWrapper>
     );

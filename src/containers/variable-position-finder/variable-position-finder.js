@@ -35,9 +35,11 @@ class VariablePositionFinder extends React.Component {
 
     const { index } = this.props.variables;
 
-    return this.state.breadcrumbs
-      .concat(getVariableName(index[this.state.selectedVariable]))
-      .join(' -> ');
+    return [
+      'Root',
+      ...this.state.breadcrumbs,
+      getVariableName(index[this.state.selectedVariable])
+    ].join(' -> ');
   }
 
   render() {
