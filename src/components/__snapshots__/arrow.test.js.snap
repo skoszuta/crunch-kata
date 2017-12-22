@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Arrow should render correctly 1`] = `
+.c0 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(test-file-stub);
+}
+
+<div
+  className="c0"
+/>
+`;

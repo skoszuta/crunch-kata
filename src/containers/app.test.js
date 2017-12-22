@@ -1,6 +1,5 @@
 import React from 'react';
-import 'jest-styled-components';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { App } from './app';
 
@@ -29,7 +28,7 @@ describe('App', () => {
   });
 
   it('should dispatch fetchVariablesWithOrder on mount', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <App variables={null} fetchVariablesWithOrder={fetchVariablesWithOrder}/>
     );
 

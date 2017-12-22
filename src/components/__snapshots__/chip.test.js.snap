@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chip should render an arrow when requested 1`] = `
+<styled.li>
+  <styled.div>
+    Example content
+  </styled.div>
+  <styled.div />
+</styled.li>
+`;
+
+exports[`Chip should render correctly 1`] = `
+<styled.li>
+  <styled.div>
+    Example content
+  </styled.div>
+</styled.li>
+`;

@@ -20,12 +20,9 @@ const SubTree = styled.ul`
   list-style-type: none;
   padding-left: 0;
   overflow: hidden;
-  height: ${(props) => props.collapsed ? 0 : 'auto'};
+  ${(props) => props.collapsed ? `display: none` : ''};
 `;
-
-const ListItem = styled.li`
-  
-`;
+SubTree.displayName = 'SubTree';
 
 const Button = styled.button`
   display: flex;
@@ -69,6 +66,7 @@ const Category = Button.extend`
     transition: all 0.3s ease;
   }
 `;
+Category.displayName = 'Category';
 
 const Variable = Button.extend`
   &:before {
@@ -112,22 +110,22 @@ export default class VariableCatalog extends React.Component {
     return tree.map((node) => {
       if (typeof node === 'string') {
         return (
-          <ListItem key={node}>
+          <li key={node}>
             <Variable depth={depth}>{getVariableName(index[node])}</Variable>
-          </ListItem>
+          </li>
         );
       } else if (typeof node === 'object') {
         const [nodeName] = Object.keys(node);
 
         return (
-          <ListItem key={nodeName}>
+          <li key={nodeName} className="test-category-wrapper">
             <Category depth={depth} collapsed={this.isCollapsed(node)} onClick={this.onCategoryClick.bind(this, node)}>
               {nodeName}
             </Category>
             <SubTree collapsed={this.isCollapsed(node)}>
               {this.renderTree(node[nodeName], depth + 1)}
             </SubTree>
-          </ListItem>
+          </li>
         );
       } else {
         throw new Error('Incorrect data structure provided.');
