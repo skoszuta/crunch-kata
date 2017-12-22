@@ -1,4 +1,4 @@
-import { FETCH_VARIABLES_WITH_ORDER } from '../actions/variables-actions';
+import { FETCH_VARIABLES_WITH_ORDER } from 'actions/variables-actions';
 
 export default function variablesReducer(variables = null, action) {
   switch (action.type) {

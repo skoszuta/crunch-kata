@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import getVariableName from '../../utils/get-variable-name';
+import getVariableName from 'utils/get-variable-name';
 
-import arrowRightIcon from './arrow-right-icon.svg';
-import graphIcon from './graph-icon.svg';
+import arrowRightIcon from 'images/arrow-right-icon.svg';
+import graphIcon from 'images/graph-icon.svg';
 
 const ListContainer = styled.ul`
   max-width: 300px;

@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-import { fetchVariablesWithOrder } from '../../actions/variables-actions';
-import VariableCatalog from '../../components/variable-catalog/variable-catalog';
-import VariablePositionFinder from '../variable-position-finder/variable-position-finder';
-import VariableFinder from '../variable-finder/variable-finder';
+import { fetchVariablesWithOrder } from 'actions/variables-actions';
+import VariableCatalog from 'components/variable-catalog';
+import VariablePositionFinder from 'containers/variable-position-finder';
+import VariableFinder from 'containers/variable-finder';
 
 const ContentWrapper = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ const Section = styled.section`
   }
 `;
 
-class App extends React.Component {
+export class App extends React.Component {
   componentDidMount() {
     this.props.fetchVariablesWithOrder();
   }

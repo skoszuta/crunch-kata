@@ -1,9 +1,15 @@
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 
-import getVariableName from '../../utils/get-variable-name';
-import getVariablePath from '../../utils/get-variable-path';
+import getVariableName from 'utils/get-variable-name';
+import getVariablePath from 'utils/get-variable-path';
+import Chip, { ChipsList } from 'components/chip';
+
+const BreadcrumbsWrapper = styled.div`
+  margin-top: 1rem;
+`;
 
 class VariablePositionFinder extends React.Component {
   constructor(props) {
@@ -35,11 +41,15 @@ class VariablePositionFinder extends React.Component {
 
     const { index } = this.props.variables;
 
-    return [
+    const breadcrumbs = [
       'Root',
       ...this.state.breadcrumbs,
       getVariableName(index[this.state.selectedVariable])
-    ].join(' -> ');
+    ].map((crumb, index, array) => <Chip arrow={index < array.length - 1} key={index}>{crumb}</Chip>);
+
+    return (
+      <ChipsList>{breadcrumbs}</ChipsList>
+    );
   }
 
   render() {
@@ -58,7 +68,7 @@ class VariablePositionFinder extends React.Component {
           onChange={this.onSelectChange.bind(this)}>
           {options}
         </select>
-        <div>{this.renderBreadcrumbs()}</div>
+        <BreadcrumbsWrapper>{this.renderBreadcrumbs()}</BreadcrumbsWrapper>
       </div>
     );
   }
