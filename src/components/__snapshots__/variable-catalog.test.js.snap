@@ -1,332 +1,538 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VariableCatalog snapshot should render correctly 1`] = `
-<styled.ul>
+.c0 {
+  max-width: 300px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 1rem;
+  list-style-type: none;
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+
+.c2 {
+  list-style-type: none;
+  padding-left: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #333333;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c1:hover {
+  color: #3A9FC2;
+}
+
+.c1:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  background-image: url(test-file-stub);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #333333;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c3:hover {
+  color: #3A9FC2;
+}
+
+.c3:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  background-image: url(test-file-stub);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 3rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #333333;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c4:hover {
+  color: #3A9FC2;
+}
+
+.c4:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  background-image: url(test-file-stub);
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #333333;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c5:hover {
+  color: #3A9FC2;
+}
+
+.c5:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  background-image: url(test-file-stub);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #333333;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c6:hover {
+  color: #3A9FC2;
+}
+
+.c6:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  background-image: url(test-file-stub);
+}
+
+<ul
+  class="c0"
+>
   <li
-    className="test-category-wrapper"
-    key="Awareness Metrics"
+    class="test-category-wrapper"
   >
-    <Category
-      collapsed={true}
-      depth={0}
-      onClick={[Function]}
+    <button
+      class="c1"
     >
       Awareness Metrics
-    </Category>
-    <SubTree
-      collapsed={true}
+    </button>
+    <ul
+      class="c2"
     >
       <li
-        className="test-category-wrapper"
-        key="Taxis"
+        class="test-category-wrapper"
       >
-        <Category
-          collapsed={true}
-          depth={1}
-          onClick={[Function]}
+        <button
+          class="c3"
         >
           Taxis
-        </Category>
-        <SubTree
-          collapsed={true}
+        </button>
+        <ul
+          class="c2"
         >
-          <li
-            key="11b0b9"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Unaided Awareness (Taxis)
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="7a89e0"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Aided Awareness (Taxis)
-            </styled.button>
+            </button>
           </li>
-        </SubTree>
+        </ul>
       </li>
       <li
-        className="test-category-wrapper"
-        key="Coffee"
+        class="test-category-wrapper"
       >
-        <Category
-          collapsed={true}
-          depth={1}
-          onClick={[Function]}
+        <button
+          class="c3"
         >
           Coffee
-        </Category>
-        <SubTree
-          collapsed={true}
+        </button>
+        <ul
+          class="c2"
         >
-          <li
-            key="786c0f"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Unaided Awareness (Coffee Roasters)
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="2d27ab"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Aided Awareness (Coffee Roasters)
-            </styled.button>
+            </button>
           </li>
-        </SubTree>
+        </ul>
       </li>
-    </SubTree>
+    </ul>
   </li>
   <li
-    className="test-category-wrapper"
-    key="Purchase Consideration and Behavior"
+    class="test-category-wrapper"
   >
-    <Category
-      collapsed={true}
-      depth={0}
-      onClick={[Function]}
+    <button
+      class="c1"
     >
       Purchase Consideration and Behavior
-    </Category>
-    <SubTree
-      collapsed={true}
+    </button>
+    <ul
+      class="c2"
     >
       <li
-        className="test-category-wrapper"
-        key="Taxis"
+        class="test-category-wrapper"
       >
-        <Category
-          collapsed={true}
-          depth={1}
-          onClick={[Function]}
+        <button
+          class="c3"
         >
           Taxis
-        </Category>
-        <SubTree
-          collapsed={true}
+        </button>
+        <ul
+          class="c2"
         >
-          <li
-            key="ede6a8"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Consideration
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="62c00f"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Likely Purchase
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="0f6ce0"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Usage
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="f2a681"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Specific Service Usage
-            </styled.button>
+            </button>
           </li>
-        </SubTree>
+        </ul>
       </li>
       <li
-        className="test-category-wrapper"
-        key="Coffee"
+        class="test-category-wrapper"
       >
-        <Category
-          collapsed={true}
-          depth={1}
-          onClick={[Function]}
+        <button
+          class="c3"
         >
           Coffee
-        </Category>
-        <SubTree
-          collapsed={true}
+        </button>
+        <ul
+          class="c2"
         >
-          <li
-            key="8d7127"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Blue Bottle Coffee Usage
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="ee3e40"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Stumptown Coffee Roasters Usage
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="8f7db6"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               Ritual Roasters Usage
-            </styled.button>
+            </button>
           </li>
-          <li
-            key="3a5f89"
-          >
-            <styled.button
-              depth={2}
+          <li>
+            <button
+              class="c4"
             >
               FOURBARREL Usage
-            </styled.button>
+            </button>
           </li>
-        </SubTree>
+        </ul>
       </li>
-    </SubTree>
+    </ul>
   </li>
   <li
-    className="test-category-wrapper"
-    key="Demographics and Technographics"
+    class="test-category-wrapper"
   >
-    <Category
-      collapsed={true}
-      depth={0}
-      onClick={[Function]}
+    <button
+      class="c1"
     >
       Demographics and Technographics
-    </Category>
-    <SubTree
-      collapsed={true}
+    </button>
+    <ul
+      class="c2"
     >
-      <li
-        key="c83da2"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           Gender
-        </styled.button>
+        </button>
       </li>
-      <li
-        key="e08fbc"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           Education
-        </styled.button>
+        </button>
       </li>
-      <li
-        key="1b44a4"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           Marital Status
-        </styled.button>
+        </button>
       </li>
-      <li
-        key="5b6a73"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           Children Under 18
-        </styled.button>
+        </button>
       </li>
-      <li
-        key="91a33f"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           Family Income
-        </styled.button>
+        </button>
       </li>
-      <li
-        key="9f4b60"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           (unnamed variable)
-        </styled.button>
+        </button>
       </li>
-    </SubTree>
+    </ul>
   </li>
   <li
-    className="test-category-wrapper"
-    key="Dimensions"
+    class="test-category-wrapper"
   >
-    <Category
-      collapsed={true}
-      depth={0}
-      onClick={[Function]}
+    <button
+      class="c1"
     >
       Dimensions
-    </Category>
-    <SubTree
-      collapsed={true}
+    </button>
+    <ul
+      class="c2"
     >
-      <li
-        key="d88613"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           City
-        </styled.button>
+        </button>
       </li>
-      <li
-        key="0323cf"
-      >
-        <styled.button
-          depth={1}
+      <li>
+        <button
+          class="c5"
         >
           Wave
-        </styled.button>
+        </button>
       </li>
-    </SubTree>
+    </ul>
   </li>
-  <li
-    key="d0fe8b"
-  >
-    <styled.button
-      depth={0}
+  <li>
+    <button
+      class="c6"
     >
       weight
-    </styled.button>
+    </button>
   </li>
-  <li
-    key="0894c5"
-  >
-    <styled.button
-      depth={0}
+  <li>
+    <button
+      class="c6"
     >
       Weight
-    </styled.button>
+    </button>
   </li>
-</styled.ul>
+</ul>
 `;

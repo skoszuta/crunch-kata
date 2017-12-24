@@ -20,7 +20,7 @@ const SubTree = styled.ul`
   list-style-type: none;
   padding-left: 0;
   overflow: hidden;
-  ${(props) => props.collapsed ? `display: none` : ''};
+  ${props => (props.collapsed ? 'display: none' : '')};
 `;
 SubTree.displayName = 'SubTree';
 
@@ -62,7 +62,7 @@ const Category = Button.extend`
     margin-right: 0.5rem;
     background-image: url(${arrowRightIcon});
     
-    transform: rotate(${(props) => props.collapsed ? 0 : 90}deg);
+    transform: rotate(${props => (props.collapsed ? 0 : 90)}deg);
     transition: all 0.3s ease;
   }
 `;
@@ -94,14 +94,8 @@ export default class VariableCatalog extends React.Component {
     this.setState({ isCollapsed });
   }
 
-  render() {
-    const { order } = this.props.variables;
-
-    return (
-      <ListContainer>
-        {this.renderTree(order)}
-      </ListContainer>
-    );
+  isCollapsed(node) {
+    return this.state.isCollapsed.has(node) ? this.state.isCollapsed.get(node) : true;
   }
 
   renderTree(tree, depth = 0) {
@@ -119,7 +113,11 @@ export default class VariableCatalog extends React.Component {
 
         return (
           <li key={nodeName} className="test-category-wrapper">
-            <Category depth={depth} collapsed={this.isCollapsed(node)} onClick={this.onCategoryClick.bind(this, node)}>
+            <Category
+              depth={depth}
+              collapsed={this.isCollapsed(node)}
+              onClick={this.onCategoryClick.bind(this, node)}
+            >
               {nodeName}
             </Category>
             <SubTree collapsed={this.isCollapsed(node)}>
@@ -133,7 +131,13 @@ export default class VariableCatalog extends React.Component {
     });
   }
 
-  isCollapsed(node) {
-    return this.state.isCollapsed.has(node) ? this.state.isCollapsed.get(node) : true;
+  render() {
+    const { order } = this.props.variables;
+
+    return (
+      <ListContainer>
+        {this.renderTree(order)}
+      </ListContainer>
+    );
   }
 }

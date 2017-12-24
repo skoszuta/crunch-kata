@@ -1,5 +1,5 @@
 export default function getVariablePath(key, tree, breadcrumbs = []) {
-  for(let i = 0; i < tree.length; i++) {
+  for (let i = 0; i < tree.length; i++) {
     const node = tree[i];
 
     if (typeof node !== 'string') {

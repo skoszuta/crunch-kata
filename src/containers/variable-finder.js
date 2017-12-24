@@ -29,7 +29,7 @@ const BackspaceButton = styled.button`
   cursor: pointer;
 `;
 
-class VariableFinder extends React.Component {
+export class VariableFinder extends React.Component {
   constructor(props) {
     super(props);
 
@@ -53,7 +53,7 @@ class VariableFinder extends React.Component {
   renderLastNode() {
     const { index, order } = this.props.variables;
     const lastNode = getNodeByPath(this.state.path, order);
-    const backspace = this.state.path.length ? <BackspaceButton onClick={this.onBackspaceClick.bind(this)}/> : '';
+    const backspace = this.state.path.length ? <BackspaceButton onClick={this.onBackspaceClick.bind(this)} /> : '';
 
     if (typeof lastNode === 'string') {
       return [
@@ -62,7 +62,7 @@ class VariableFinder extends React.Component {
       ];
     } else {
       const options = (typeof lastNode === 'object') ? Object.keys(lastNode) : lastNode.keys();
-      const optionsDOM = options.map((option) => <option key={option}>{option}</option>);
+      const optionsDOM = options.map(option => <option key={option}>{option}</option>);
 
       return (
         <LastNode>
@@ -72,19 +72,18 @@ class VariableFinder extends React.Component {
           </select>
           {backspace}
         </LastNode>
-      )
+      );
     }
   }
 
   renderPath() {
     return ['Root', ...this.state.path].map((segment, index) => (
-      <Chip arrow={true} key={index}>{segment}</Chip>
+      // eslint-disable-next-line react/no-array-index-key
+      <Chip arrow key={index}>{segment}</Chip>
     ));
   }
 
   render() {
-    const { index, order } = this.props.variables;
-
     return (
       <div>
         <ChipsList>
@@ -92,12 +91,7 @@ class VariableFinder extends React.Component {
           {this.renderLastNode()}
         </ChipsList>
       </div>
-    )
-  }
-
-  getVariableByPath(path) {
-    const { index, order } = this.props.variables;
-    return index[getNodeByPath(path, order)];
+    );
   }
 }
 

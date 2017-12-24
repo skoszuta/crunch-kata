@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "no-void": "off",
+    "comma-dangle": "off",
+    "function-paren-newline": "off",
+    "no-plusplus": "off",
+    "consistent-return": "off",
+    "no-else-return": "off",
+    "import/no-named-as-default": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "webpack.config.js", "src/jest-setup.js"]}],
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-no-bind": "off",
+  }
+}

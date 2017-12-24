@@ -11,6 +11,7 @@ import { injectGlobal } from 'styled-components';
 import rootReducer from './reducers/index';
 import App from './containers/app';
 
+// eslint-disable-next-line no-unused-expressions
 injectGlobal`
   @import url("https://use.typekit.net/mwt6lgp.css");
   
@@ -32,7 +33,7 @@ const store = createStore(rootReducer, applyMiddleware(promiseMiddleware));
 
 render(
   <Provider store={store}>
-    <App/>
+    <App />
   </Provider>,
   document.getElementById('root')
 );

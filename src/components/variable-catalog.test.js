@@ -1,6 +1,6 @@
 import fs from 'fs';
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount, render } from 'enzyme';
 import 'jest-styled-components';
 
 import VariableCatalog from './variable-catalog';
@@ -13,8 +13,8 @@ describe('VariableCatalog', () => {
 
   describe('snapshot', () => {
     it('should render correctly', () => {
-      const wrapper = shallow(
-        <VariableCatalog variables={variables}/>
+      const wrapper = render(
+        <VariableCatalog variables={variables} />
       );
 
       expect(wrapper).toMatchSnapshot();
@@ -26,14 +26,14 @@ describe('VariableCatalog', () => {
 
     beforeEach(() => {
       wrapper = mount(
-        <VariableCatalog variables={variables}/>
+        <VariableCatalog variables={variables} />
       );
     });
 
     it('should render all sub-trees initially collapsed', () => {
       const subTrees = wrapper.find('SubTree');
 
-      subTrees.forEach((subTree) => expect(subTree).toHaveStyleRule('display', 'none'));
+      subTrees.forEach(subTree => expect(subTree).toHaveStyleRule('display', 'none'));
     });
 
     // Below tests disabled due to enzyme wrapper not being updated after calling simulate()

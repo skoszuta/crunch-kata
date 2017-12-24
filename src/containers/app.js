@@ -44,15 +44,15 @@ export class App extends React.Component {
       <ContentWrapper>
         <Section>
           <Heading>The component</Heading>
-          <VariableCatalog variables={this.props.variables}/>
+          <VariableCatalog variables={this.props.variables} />
         </Section>
         <Section>
           <Heading>Variable position finder</Heading>
-          <VariablePositionFinder/>
+          <VariablePositionFinder />
         </Section>
         <Section>
           <Heading>Variable finder</Heading>
-          <VariableFinder/>
+          <VariableFinder />
         </Section>
       </ContentWrapper>
     );

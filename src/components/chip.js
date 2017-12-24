@@ -47,7 +47,7 @@ export const ChipsList = styled.ul`
 `;
 
 export default function Chip(props) {
-  const arrow = props.arrow ? <Arrow/> : '';
+  const arrow = props.arrow ? <Arrow /> : '';
 
   return (
     <ChipWrapper>

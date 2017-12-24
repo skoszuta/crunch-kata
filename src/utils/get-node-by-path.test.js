@@ -10,7 +10,7 @@ describe('getNodeByPath', () => {
 
   it('should return the correct node from the middle of the tree', () => {
     expect(getNodeByPath([1, 'Purchase Consideration and Behavior', 0], tree)).toEqual({
-      "Taxis": ["ede6a8", "62c00f", "0f6ce0", "f2a681"]
+      Taxis: ['ede6a8', '62c00f', '0f6ce0', 'f2a681']
     });
   });
 

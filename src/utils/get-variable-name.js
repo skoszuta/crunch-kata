@@ -1,3 +1,3 @@
-export default function getVariableName({ name }, id = null) {
-  return `${id ? `${id} - ` : ''}${name ? name : '(unnamed variable)'}`;
+export default function getVariableName({ name = '(unnamed variable)' }, id = null) {
+  return `${id ? `${id} - ` : ''}${name}`;
 }

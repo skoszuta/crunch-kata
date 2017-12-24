@@ -11,7 +11,7 @@ const BreadcrumbsWrapper = styled.div`
   margin-top: 1rem;
 `;
 
-class VariablePositionFinder extends React.Component {
+export class VariablePositionFinder extends React.Component {
   constructor(props) {
     super(props);
 
@@ -21,12 +21,12 @@ class VariablePositionFinder extends React.Component {
     };
   }
 
-  onSelectChange({ target: { value }}) {
+  onSelectChange({ target: { value } }) {
     const { order } = this.props.variables;
 
     this.setState({
       selectedVariable: value,
-      breadcrumbs: getVariablePath(value, this.props.variables.order)
+      breadcrumbs: getVariablePath(value, order)
     });
   }
 
@@ -39,13 +39,18 @@ class VariablePositionFinder extends React.Component {
       return '';
     }
 
-    const { index } = this.props.variables;
+    const { index: variableIndex } = this.props.variables;
 
     const breadcrumbs = [
       'Root',
       ...this.state.breadcrumbs,
-      getVariableName(index[this.state.selectedVariable])
-    ].map((crumb, index, array) => <Chip arrow={index < array.length - 1} key={index}>{crumb}</Chip>);
+      getVariableName(variableIndex[this.state.selectedVariable])
+    ].map((crumb, index, array) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <Chip arrow={index < array.length - 1} key={index}>
+        {crumb}
+      </Chip>
+    ));
 
     return (
       <ChipsList>{breadcrumbs}</ChipsList>
@@ -58,14 +63,17 @@ class VariablePositionFinder extends React.Component {
     ));
 
     if (this.state.selectedVariable === void 0) {
-      options.unshift(<option value={void 0} key="placeholder">Select a variable to see its position...</option>);
+      options.unshift(
+        <option value={void 0} key="placeholder">Select a variable to see its position...</option>
+      );
     }
 
     return (
       <div>
         <select
           value={this.state.selectedVariable}
-          onChange={this.onSelectChange.bind(this)}>
+          onChange={this.onSelectChange.bind(this)}
+        >
           {options}
         </select>
         <BreadcrumbsWrapper>{this.renderBreadcrumbs()}</BreadcrumbsWrapper>

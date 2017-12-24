@@ -35,11 +35,11 @@ module.exports = {
       filename: path.resolve(__dirname, 'dist', 'index.html')
     }),
     new CopyWebpackPlugin([
-      {from: './json/**/*', to: path.resolve(__dirname, 'dist')}
+      { from: './json/**/*', to: path.resolve(__dirname, 'dist') }
     ])
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
     open: true

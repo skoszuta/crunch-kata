@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
+import 'jest-styled-components';
 
 import { App } from './app';
 
@@ -12,8 +13,8 @@ describe('App', () => {
   });
 
   it('should render a loading indicator', () => {
-    const wrapper = shallow(
-      <App variables={null} fetchVariablesWithOrder={fetchVariablesWithOrder}/>
+    const wrapper = render(
+      <App variables={null} fetchVariablesWithOrder={fetchVariablesWithOrder} />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -21,15 +22,15 @@ describe('App', () => {
 
   it('should render correctly with variables loaded', () => {
     const wrapper = shallow(
-      <App variables={variablesLoaded} fetchVariablesWithOrder={fetchVariablesWithOrder}/>
+      <App variables={variablesLoaded} fetchVariablesWithOrder={fetchVariablesWithOrder} />
     );
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should dispatch fetchVariablesWithOrder on mount', () => {
-    const wrapper = shallow(
-      <App variables={null} fetchVariablesWithOrder={fetchVariablesWithOrder}/>
+    shallow(
+      <App variables={null} fetchVariablesWithOrder={fetchVariablesWithOrder} />
     );
 
     expect(fetchVariablesWithOrder).toBeCalled();

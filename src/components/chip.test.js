@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from 'enzyme';
 import 'jest-styled-components';
 
 import Chip from './chip';
@@ -8,7 +8,7 @@ describe('Chip', () => {
   const exampleContent = 'Example content';
 
   it('should render correctly', () => {
-    const wrapper = shallow(
+    const wrapper = render(
       <Chip>{exampleContent}</Chip>
     );
 
@@ -16,8 +16,8 @@ describe('Chip', () => {
   });
 
   it('should render an arrow when requested', () => {
-    const wrapper = shallow(
-      <Chip arrow={true}>{exampleContent}</Chip>
+    const wrapper = render(
+      <Chip arrow>{exampleContent}</Chip>
     );
 
     expect(wrapper).toMatchSnapshot();

@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VariablePositionFinder snapshot should render correctly 1`] = `
+.c0 {
+  margin-top: 1rem;
+}
+
+<div>
+  <select>
+    <option>
+      Select a variable to see its position...
+    </option>
+    <option
+      value="786c0f"
+    >
+      786c0f - Unaided Awareness (Coffee Roasters)
+    </option>
+    <option
+      value="d88613"
+    >
+      d88613 - City
+    </option>
+    <option
+      value="0894c5"
+    >
+      0894c5 - Weight
+    </option>
+    <option
+      value="0323cf"
+    >
+      0323cf - Wave
+    </option>
+    <option
+      value="d0fe8b"
+    >
+      d0fe8b - weight
+    </option>
+    <option
+      value="2d27ab"
+    >
+      2d27ab - Aided Awareness (Coffee Roasters)
+    </option>
+    <option
+      value="7a89e0"
+    >
+      7a89e0 - Aided Awareness (Taxis)
+    </option>
+    <option
+      value="f2a681"
+    >
+      f2a681 - Specific Service Usage
+    </option>
+    <option
+      value="8f7db6"
+    >
+      8f7db6 - Ritual Roasters Usage
+    </option>
+    <option
+      value="e08fbc"
+    >
+      e08fbc - Education
+    </option>
+    <option
+      value="5b6a73"
+    >
+      5b6a73 - Children Under 18
+    </option>
+    <option
+      value="ede6a8"
+    >
+      ede6a8 - Consideration
+    </option>
+    <option
+      value="9f4b60"
+    >
+      9f4b60 - (unnamed variable)
+    </option>
+    <option
+      value="91a33f"
+    >
+      91a33f - Family Income
+    </option>
+    <option
+      value="3a5f89"
+    >
+      3a5f89 - FOURBARREL Usage
+    </option>
+    <option
+      value="62c00f"
+    >
+      62c00f - Likely Purchase
+    </option>
+    <option
+      value="ee3e40"
+    >
+      ee3e40 - Stumptown Coffee Roasters Usage
+    </option>
+    <option
+      value="11b0b9"
+    >
+      11b0b9 - Unaided Awareness (Taxis)
+    </option>
+    <option
+      value="c83da2"
+    >
+      c83da2 - Gender
+    </option>
+    <option
+      value="1b44a4"
+    >
+      1b44a4 - Marital Status
+    </option>
+    <option
+      value="0f6ce0"
+    >
+      0f6ce0 - Usage
+    </option>
+    <option
+      value="8d7127"
+    >
+      8d7127 - Blue Bottle Coffee Usage
+    </option>
+  </select>
+  <div
+    class="c0"
+  />
+</div>
+`;
